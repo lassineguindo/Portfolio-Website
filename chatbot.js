@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "experience": " IT Specialist(UMD Extension), Administrative Assistant II (UMD Extension), Store Clerk(Giant Food).",
     "education": "Associate of Science (AS) in IT (PGCC), Bachelor of Science (BS) in Computer Technology (Bowie State).",
     "projects": "Check out my projects on GitHub: <a href='https://github.com/lassineguindo?tab=repositories' target='_blank'>GitHub Repositories</a>",
-    "phone": "Call me at 240-707-4632",
+    "phone": "Call me at 240-707-4632"
     "default": "I'm not sure how to answer that. Please ask me about my skills, experience, education, projects, or phone."
   };
 
