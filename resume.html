@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <!-- Essential for mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lassine's Portfolio - Resume</title>
   <style>
     /* Basic Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    /* Global Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -28,13 +24,8 @@
       padding: 1.5rem 0;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-    }
-    header h3 {
-      font-size: 1.25rem;
-      margin-top: 0.5rem;
-    }
+    header h1 { font-size: 2.5rem; }
+    header h3 { font-size: 1.25rem; margin-top: 0.5rem; }
     nav {
       background: #000;
       display: flex;
@@ -49,14 +40,9 @@
       transition: color 0.3s ease;
       font-size: 1rem;
     }
-    nav a:hover {
-      color: #aaa;
-    }
+    nav a:hover { color: #aaa; }
     @media (max-width:600px) {
-      nav a {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-      }
+      nav a { padding: 0.75rem 1rem; font-size: 0.9rem; }
     }
     section {
       padding: 2rem;
@@ -70,7 +56,7 @@
       padding-bottom: 0.5rem;
       color: #000;
     }
-    /* Custom download button (black) */
+    /* Download Button (Black) */
     .download-button {
       display: inline-block;
       background: #000;
@@ -82,13 +68,11 @@
       transition: background 0.3s ease;
       margin-bottom: 1rem;
     }
-    .download-button:hover {
-      background: #333;
-    }
-    /* PDF Viewer styling */
+    .download-button:hover { background: #333; }
+    /* PDF Viewer */
     .pdf-viewer {
-      width: 100%;
-      height: 90vh;  /* nearly full viewport height */
+      width: 90vw;    /* 90% of viewport width */
+      height: 90vh;   /* 90% of viewport height */
       border: none;
       display: block;
       margin: 0 auto;
@@ -118,16 +102,16 @@
     <h2>View or Download Resume</h2>
     <!-- Download button -->
     <p>
-      <a href="https://lassineguindo.github.io/portfolio/LassinePierre_Guindo_Resume_.pdf" download class="download-button">
+      <a href="https://drive.google.com/uc?export=download&id=1gXEIY8mm0hZjnYlK5q9S4JC2xOJHQ_Cs" download class="download-button">
         Download Resume
       </a>
     </p>
-    <!-- PDF Viewer using Google Docs Viewer -->
+    <!-- Google Docs Viewer iframe -->
     <iframe class="pdf-viewer"
-      src="https://docs.google.com/gview?url=https://lassineguindo.github.io/portfolio/LassinePierre_Guindo_Resume_.pdf&embedded=true"
+      src="https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=1gXEIY8mm0hZjnYlK5q9S4JC2xOJHQ_Cs&embedded=true"
       title="Lassine Pierre Guindo Resume">
       Your browser does not support embedded PDFs.
-      <a href="https://lassineguindo.github.io/portfolio/LassinePierre_Guindo_Resume_.pdf" download>Download the PDF</a>
+      <a href="https://drive.google.com/uc?export=download&id=1gXEIY8mm0hZjnYlK5q9S4JC2xOJHQ_Cs" download>Download the PDF</a>
     </iframe>
   </section>
   <footer>
