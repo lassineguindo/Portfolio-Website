@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <!-- Essential for mobile responsiveness -->
+  <!-- Ensure mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lassine's Portfolio - About</title>
   <style>
@@ -12,6 +12,8 @@
       margin: 0;
       padding: 0;
     }
+
+    /* Global Styles */
     html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -20,7 +22,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
     /* Header */
@@ -44,14 +46,14 @@
       display: flex;
       justify-content: center;
       border-bottom: 1px solid #444;
-      flex-wrap: wrap; /* allow wrapping on narrow screens */
+      flex-wrap: wrap; /* allow wrapping on small screens */
     }
     nav a {
       color: #fff;
       padding: 1rem 1.5rem;
       text-decoration: none;
       transition: color 0.3s ease;
-      font-size: 1rem; /* default nav font size */
+      font-size: 1rem;
     }
     nav a:hover {
       color: #aaa;
@@ -59,13 +61,13 @@
     @media (max-width: 600px) {
       nav a {
         padding: 0.75rem 1rem;
-        font-size: 0.9rem; /* slightly smaller text on narrow screens */
+        font-size: 0.9rem;
       }
     }
 
     /* Main Section */
     section {
-      max-width: 900px;
+      max-width: 900px; /* container width */
       margin: 2rem auto;
       padding: 0 1rem;
     }
@@ -76,21 +78,7 @@
       color: #000;
     }
 
-    /* Footer */
-    footer {
-      background: #000;
-      color: #fff;
-      text-align: center;
-      padding: 1rem;
-      margin-top: auto;
-    }
-
-    /* Skills, Experience, Education Headings */
-    h3 {
-      margin-top: 1.5rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
-    }
+    /* Skills List */
     ul {
       list-style-type: none;
       padding-left: 0;
@@ -98,10 +86,10 @@
       margin-bottom: 1rem;
     }
 
-    /* EXPERIENCE SECTION: 3-Card Layout */
+    /* Experience Cards */
     .experience-container {
       display: flex;
-      flex-wrap: wrap; /* wrap on smaller screens */
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
       gap: 2rem;
       margin-top: 1rem;
     }
@@ -115,7 +103,7 @@
       padding: 1.5rem;
     }
     .job-card img {
-      width: 210px;
+      width: 210px; /* or adjust as you like */
       display: block;
       margin-bottom: 1rem;
       border-radius: 4px;
@@ -139,7 +127,7 @@
       margin-top: 0.5rem;
     }
 
-    /* EDUCATION SECTION */
+    /* Education Cards */
     .education-container {
       display: flex;
       flex-wrap: wrap;
@@ -156,7 +144,7 @@
       padding: 1.5rem;
     }
     .edu-card img {
-      width: 50px; /* Adjust logo size */
+      width: 50px;
       display: block;
       margin-bottom: 1rem;
       border-radius: 4px;
@@ -178,6 +166,15 @@
       list-style-type: disc;
       margin-left: 1.5rem;
       margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
     }
   </style>
 </head>
@@ -230,6 +227,7 @@
           </ul>
         </div>
       </div>
+
       <!-- Card 2: Administrative Assistant II -->
       <div class="job-card">
         <img src="umd.jpg" alt="UMD Extension Logo">
@@ -243,6 +241,7 @@
           </ul>
         </div>
       </div>
+
       <!-- Card 3: Store Clerk (Giant Food) -->
       <div class="job-card">
         <img src="Giant.jpg" alt="Giant Food Logo">
@@ -258,7 +257,42 @@
       </div>
     </div>
 
-    <!-- Education Section -->
+    <!-- Education Section (Two-Column Layout) -->
     <h2>Educational Background</h2>
     <div class="education-container">
       <!-- Card 1: PGCC -->
+      <div class="edu-card">
+        <img src="PGCC.jpg" alt="PGCC Logo">
+        <div class="edu-title">Associate of Science (AS), Information Technology</div>
+        <div class="edu-dates">Prince George's Community College</div>
+        <div class="edu-details">
+          <ul>
+            <li>Focused on fundamental IT concepts, networking, and system administration.</li>
+            <li>Gained hands-on experience with hardware/software troubleshooting and user support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Bowie State -->
+      <div class="edu-card">
+        <img src="bowiestate.jpg" alt="Bowie State Logo">
+        <div class="edu-title">Bachelor of Science (BS), Computer Technology</div>
+        <div class="edu-dates">Bowie State University</div>
+        <div class="edu-details">
+          <ul>
+            <li>Heavy focus on cloud computing, the Internet of Things (IoT), web services, and cybersecurity—making it one of the few innovative programs of its kind in Maryland.</li>
+            <li>Emphasized effective communication of technological theory, skills, and application within field settings.</li>
+            <li>Applied core technological principles of hardware and software to analyze and solve real-world problems.</li>
+            <li>Developed, tested, secured, designed, and implemented innovative business application tools.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Lassine. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
