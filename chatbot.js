@@ -2,12 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // Chatbot responses
   const responses = {
     "hi": "Hello! How can I help you today?",
-    "hello": "Hi there! Ask me about my skills, experience, education, or projects.",
+    "hello": "Hi there! Ask me about my skills, experience, education, projects, or phone number.",
     "skills": "I specialize in Python, JavaScript, HTML, CSS, cybersecurity tools like Wireshark and Snort, and data visualization with Looker Studio.",
     "experience": " IT Specialist(UMD Extension), Administrative Assistant II (UMD Extension), Store Clerk(Giant Food).",
     "education": "Associate of Science (AS) in IT (PGCC), Bachelor of Science (BS) in Computer Technology (Bowie State).",
     "projects": "Check out my projects on GitHub: <a href='https://github.com/lassineguindo?tab=repositories' target='_blank'>GitHub Repositories</a>",
-    "default": "I'm not sure how to answer that. Please ask me about my skills, experience, education, or projects."
+    "phone": "Call me at 240-707-4632",
+    "default": "I'm not sure how to answer that. Please ask me about my skills, experience, education, projects, or phone."
   };
 
   // Send message function
