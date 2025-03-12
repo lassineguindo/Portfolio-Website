@@ -77,8 +77,8 @@
     /* Custom download button styling (black) */
     .download-button {
       display: inline-block;
-      background: #000;  /* black */
-      color: #fff;       /* white text */
+      background: #000;  /* Black background */
+      color: #fff;       /* White text */
       padding: 0.75rem 1.5rem;
       text-decoration: none;
       border-radius: 5px;
@@ -86,15 +86,15 @@
       transition: background 0.3s ease;
     }
     .download-button:hover {
-      background: #333; /* slightly lighter black on hover */
+      background: #333; /* Darker black on hover */
     }
-    /* PDF Viewer Container */
+    /* PDF Viewer */
     .pdf-viewer {
-      width: 100%;       /* fill container width */
-      height: 90vh;      /* tall viewer */
-      border: none;      /* no border */
-      display: block;
-      margin: 0 auto;    /* center horizontally if there's extra space */
+      width: 90vw;    /* wide: 90% of the viewport width */
+      height: 90vh;   /* tall: 90% of the viewport height */
+      border: none;   /* no border around iframe */
+      display: block; /* center via margin if desired */
+      margin: 0 auto;
     }
     /* Footer */
     footer {
@@ -121,14 +121,14 @@
 
   <section>
     <h2>View or Download Resume</h2>
-    <!-- Black "Download Resume" button -->
+    <!-- "Download Resume" button in black -->
     <p>
       <a href="LassinePierre_Guindo_Resume_.pdf" download class="download-button">
         Download Resume
       </a>
     </p>
 
-    <!-- PDF Viewer (iframe) -->
+    <!-- Large iframe for PDF viewer, nearly filling the screen -->
     <iframe
       class="pdf-viewer"
       src="LassinePierre_Guindo_Resume_.pdf"
