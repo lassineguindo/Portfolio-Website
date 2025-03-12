@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lassine's Portfolio - Resume</title>
   <style>
-    /* Global Styles (same as others) */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    /* Global Styles */
     html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -23,8 +28,13 @@
       padding: 1.5rem 0;
       text-align: center;
     }
-    header h1 { font-size: 2.5rem; }
-    header h3 { font-size: 1.25rem; margin-top: 0.5rem; }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header h3 {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
     nav {
       background: #000;
       display: flex;
@@ -39,13 +49,18 @@
       transition: color 0.3s ease;
       font-size: 1rem;
     }
-    nav a:hover { color: #aaa; }
+    nav a:hover {
+      color: #aaa;
+    }
     @media (max-width:600px) {
-      nav a { padding: 0.75rem 1rem; font-size: 0.9rem; }
+      nav a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       text-align: center;
     }
@@ -59,20 +74,13 @@
       color: #000;
       margin-bottom: 1rem;
     }
-    section a {
-      color: #444;
-      text-decoration: none;
-      transition: color 0.3s ease;
+    /* PDF Viewer */
+    .pdf-viewer {
+      width: 100%;
+      height: 90vh; /* nearly full screen height */
+      border: none;
     }
-    section a:hover { color: #000; }
-    /* Resume Image */
-    .resume-image {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
+    /* Footer */
     footer {
       background: #000;
       color: #fff;
@@ -94,14 +102,23 @@
     <a href="resume.html">Resume</a>
     <a href="contact.html">Contact</a>
   </nav>
+
   <section>
     <h2>View or Download Resume</h2>
-    <p>Below is an image version of my resume:</p>
-    <img src="LassinePierreGuindo-resume_page-0001.jpg" alt="Lassine Pierre Guindo Resume" class="resume-image">
-    <p>
-      <a href="LassinePierreGuindo-resume.pdf" download>Download Full Resume (PDF)</a>
-    </p>
+    <!-- Download link at the top -->
+    <p><a href="LassinePierre_Guindo_Resume_.pdf" download>Download Resume (PDF)</a></p>
+
+    <!-- Large iframe for PDF viewer -->
+    <iframe
+      class="pdf-viewer"
+      src="LassinePierre_Guindo_Resume_.pdf"
+      title="Lassine Pierre Guindo Resume">
+      <!-- Fallback if PDF not supported -->
+      Your browser does not support embedded PDFs.
+      <a href="LassinePierre_Guindo_Resume_.pdf" download>Download the PDF</a>
+    </iframe>
   </section>
+
   <footer>
     <p>&copy; 2024 Lassine. All Rights Reserved.</p>
   </footer>
