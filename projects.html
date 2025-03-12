@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lassine's Portfolio - Projects</title>
   <style>
-    /* Basic Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    /* Global Styles */
-    body {
+    /* Global Styles (same as others) */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       color: #000;
-      background-color: #fff;
+      background: #fff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow-x: hidden;
     }
-    /* Header */
     header {
       background: #000;
       color: #fff;
       padding: 1.5rem 0;
       text-align: center;
     }
-    /* Navigation */
+    header h1 { font-size: 2.5rem; }
+    header h3 { font-size: 1.25rem; margin-top: 0.5rem; }
     nav {
       background: #000;
       display: flex;
       justify-content: center;
       border-bottom: 1px solid #444;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
       padding: 1rem 1.5rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 1rem;
     }
-    nav a:hover {
-      color: #aaa;
+    nav a:hover { color: #aaa; }
+    @media (max-width:600px) {
+      nav a { padding: 0.75rem 1rem; font-size: 0.9rem; }
     }
-    /* Section Content */
     section {
       padding: 2rem;
       max-width: 800px;
@@ -55,6 +53,7 @@
       margin-bottom: 1rem;
       border-bottom: 1px solid #444;
       padding-bottom: 0.5rem;
+      color: #000;
     }
     section p {
       color: #000;
@@ -73,10 +72,7 @@
       font-weight: bold;
       transition: color 0.3s ease;
     }
-    section ul li a:hover {
-      color: #444;
-    }
-    /* Footer */
+    section ul li a:hover { color: #444; }
     footer {
       background: #000;
       color: #fff;
@@ -89,6 +85,7 @@
 <body>
   <header>
     <h1>My Projects</h1>
+    <h3>Welcome to my portfolio</h3>
   </header>
   <nav>
     <a href="index.html">Home</a>
