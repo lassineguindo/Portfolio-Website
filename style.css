@@ -1,7 +1,14 @@
+/* Basic Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* Chat Container */
 .chat-container {
   width: 320px;
-  background: #2c3e50;
+  background: #2c3e50; /* changed to your dark background color */
   border-radius: 8px;
   position: fixed;
   bottom: 20px;
@@ -13,7 +20,7 @@
   overflow: hidden;
 }
 
-/* Collapsed State - hides chat body & input */
+/* Collapsed state hides body and input */
 .chat-container.collapsed .chat-body,
 .chat-container.collapsed .chat-input {
   display: none;
@@ -26,11 +33,12 @@
   padding: 10px;
   text-align: center;
   font-weight: bold;
-  /* Position toggle arrow on the right side */
+
+  /* So we can place the toggle arrow to the right */
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px; /* space between text and arrow */
+  justify-content: center;
+  gap: 8px;
 }
 
 /* Toggle Arrow Button */
@@ -51,7 +59,7 @@
   box-sizing: border-box;
 }
 
-/* Chat Input Section */
+/* Chat Input */
 .chat-input {
   background: #34495e;
   padding: 10px;
