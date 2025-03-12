@@ -1,3 +1,4 @@
+/* Chat Container */
 .chat-container {
   width: 320px;
   background: #2c3e50;
@@ -11,13 +12,37 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+/* Collapsed State - hides chat body & input */
+.chat-container.collapsed .chat-body,
+.chat-container.collapsed .chat-input {
+  display: none;
+}
+
+/* Chat Header */
 .chat-header {
   background: #000;
   color: #fff;
   padding: 10px;
   text-align: center;
   font-weight: bold;
+  /* Position toggle arrow on the right side */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* space between text and arrow */
 }
+
+/* Toggle Arrow Button */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Chat Body */
 .chat-body {
   background: #000;
   height: 250px;
@@ -25,6 +50,8 @@
   padding: 10px;
   box-sizing: border-box;
 }
+
+/* Chat Input Section */
 .chat-input {
   background: #34495e;
   padding: 10px;
@@ -52,6 +79,8 @@
 .chat-input button:hover {
   background: #3498db;
 }
+
+/* Messages */
 .user-message,
 .bot-message {
   margin: 5px 0;
