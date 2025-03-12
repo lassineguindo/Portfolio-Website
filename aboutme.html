@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lassine's Portfolio - About</title>
+  <style>
+    /* Basic Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    nav {
+      background: #000;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      padding: 0.75rem 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #666;
+    }
+    section {
+      max-width: 900px; /* Slightly wider for the card layouts */
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    /* Subheadings for Skills, Experience, Education */
+    h3 {
+      margin-top: 1.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    /* Skills List */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* EXPERIENCE SECTION: 3-Card Layout in a Single Row */
+    .experience-container {
+      display: flex;
+      flex-wrap: wrap; /* allows wrapping on smaller screens */
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .job-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 280px;
+      max-width: 450px;
+      padding: 1.5rem;
+    }
+    .job-card img {
+  width: 210px; /* or 150px, etc. */
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+    }
+
+
+
+    .job-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .job-dates {
+      color: #666;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .job-details {
+      line-height: 1.6;
+    }
+    .job-details ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+
+    /* EDUCATION SECTION: Two-Column Card Layout */
+    .education-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .edu-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 280px;
+      max-width: 450px;
+      padding: 1.5rem;
+    }
+    .edu-card img {
+      width:50px; /* Adjust logo size */
+      display: block;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+    }
+    .edu-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .edu-dates {
+      color: #666;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+    .edu-details {
+      line-height: 1.6;
+    }
+    .edu-details ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About me</a>
+    <a href="projects.html">Projects</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section>
+   
+    
+	<!-- Skills Section -->
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, JavaScript, HTML, CSS</li>
+      <li><strong>Data Visualization/Analytics:</strong> Google Looker Studio (Call Center Data Analysis &amp; Trend Monitoring), basic SQL, Kibana</li>
+      <li><strong>Cybersecurity:</strong> Wireshark, Event Viewer, Elastic Stack, Snort, John the Ripper, VirtualBox, Linux (Kali, Ubuntu, CentOS, Parrot OS)</li>
+      <li><strong>Security Frameworks:</strong> NIST, OWASP, MITRE ATT&amp;CK, Cyber Kill Chain</li>
+      <li><strong>Creative Tools:</strong> Blender, Canva</li>
+      <li><strong>Web Development:</strong> WordPress, Wix, Squarespace</li>
+      <li><strong>Technical Support:</strong> Providing phone and in-person tech support, RDP, Troubleshooting, OS Recovery, Device Setup &amp; Configuration</li>
+      <li><strong>Other Skills:</strong> Microsoft Office Suite, Google Workspace, logical problem-solving, critical thinking, team leadership, project coordination</li>
+    </ul>
+
+    <!-- Experience Section -->
+    <h2>Experience</h2>
+    <!-- One Row with 3 Cards: IT Specialist, Administrative Assistant II, Store Clerk -->
+    <div class="experience-container">
+      <!-- Card 1: IT Specialist -->
+      <div class="job-card">
+        <img src="umd.jpg" alt="UMD Extension Logo">
+        <div class="job-title">IT Specialist (University of Maryland Extension)</div>
+        <div class="job-dates">July 2024 – Current</div>
+        <div class="job-details">
+          <ul>
+            <li>Provided phone and in-person tech support focusing on troubleshooting, OS recovery, and device setup.</li>
+            <li>Developed interactive dashboards for call center data analysis and trend monitoring, including a geo map displaying call locations to deliver actionable insights.</li>
+            <li>Assisted community members in accessing digital inclusion resources and affordable broadband services.</li>
+            <li>Offered targeted guidance and training to enhance digital literacy among Maryland residents.</li>
+            <li>Conducted research to identify local resources and community needs, ensuring effective digital access and inclusion initiatives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Administrative Assistant II -->
+      <div class="job-card">
+        <img src="umd.jpg" alt="UMD Extension Logo">
+        <div class="job-title">Administrative Assistant II (UMD Extension)</div>
+        <div class="job-dates">October 2023 – June 2024 (9 months)</div>
+        <div class="job-details">
+          <ul>
+            <li>Assisted community members in accessing digital inclusion resources and affordable broadband services.</li>
+            <li>Provided technical support and training to enhance digital literacy for Maryland residents, and personally attended events to promote digital access and gather insights into community needs.</li>
+            <li>Conducted research to identify local resources and drive inclusion initiatives.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: Store Clerk (Giant Food) -->
+      <div class="job-card">
+        <img src="Giant.jpg" alt="Giant Food Logo">
+        <div class="job-title">Store Clerk (Giant Food)</div>
+        <div class="job-dates">June 2019 – April 2022 (2 years 10 months)</div>
+        <div class="job-details">
+          <ul>
+            <li>Maintained fully stocked shelves and a welcoming store atmosphere across grocery, produce, and dairy.</li>
+            <li>Created engaging product displays, ensured neat organization, and trained new employees.</li>
+            <li>Provided exceptional customer service to enhance every shopping experience.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education Section (Two-Column Layout) -->
+    <h2>Educational Background</h2>
+    <div class="education-container">
+      <!-- Card 1: PGCC -->
+      <div class="edu-card">
+        <img src="PGCC.jpg" alt="PGCC Logo">
+        <div class="edu-title">Associate of Science (AS), Information Technology</div>
+        <div class="edu-dates">Prince George's Community College</div>
+        <div class="edu-details">
+          <ul>
+            <li>Focused on fundamental IT concepts, networking, and system administration.</li>
+            <li>Gained hands-on experience with hardware/software troubleshooting and user support.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Bowie State -->
+      <div class="edu-card">
+        <img src="bowiestate.jpg" alt="Bowie State Logo">
+        <div class="edu-title">Bachelor of Science (BS), Computer Technology</div>
+        <div class="edu-dates">Bowie State University</div>
+        <div class="edu-details">
+          <ul>
+            <li>Heavy focus on cloud computing, the Internet of Things (IoT), web services, and cybersecurity, making it one of the few innovative programs of its kind in Maryland.</li>
+            <li>Emphasized effective communication of technological theory, skills, and application within field settings.</li>
+            <li>Applied core technological principles of hardware and software to analyze and solve real-world problems.</li>
+            <li>Developed, tested, secured, designed, and implemented innovative business application tools.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Lassine. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
