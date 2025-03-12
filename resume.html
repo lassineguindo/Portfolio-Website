@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lassine's Portfolio - Resume</title>
   <style>
@@ -52,7 +52,7 @@
     nav a:hover {
       color: #aaa;
     }
-    @media (max-width:600px) {
+    @media (max-width: 600px) {
       nav a {
         padding: 0.75rem 1rem;
         font-size: 0.9rem;
@@ -74,11 +74,25 @@
       color: #000;
       margin-bottom: 1rem;
     }
+    /* Custom download button styling */
+    .download-button {
+      display: inline-block;
+      background: #007bff; /* A blue color */
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .download-button:hover {
+      background: #0056b3;
+    }
     /* PDF Viewer */
     .pdf-viewer {
       width: 100%;
-      height: 90vh; /* nearly full screen height */
-      border: none;
+      height: 95vh; /* nearly full screen height */
+      border: none; /* no border around iframe */
     }
     /* Footer */
     footer {
@@ -105,15 +119,19 @@
 
   <section>
     <h2>View or Download Resume</h2>
-    <!-- Download link at the top -->
-    <p><a href="LassinePierre_Guindo_Resume_.pdf" download>Download Resume (PDF)</a></p>
+    <!-- "Download Resume" button at the top -->
+    <p>
+      <a href="LassinePierre_Guindo_Resume_.pdf" download class="download-button">
+        Download Resume
+      </a>
+    </p>
 
     <!-- Large iframe for PDF viewer -->
     <iframe
       class="pdf-viewer"
       src="LassinePierre_Guindo_Resume_.pdf"
       title="Lassine Pierre Guindo Resume">
-      <!-- Fallback if PDF not supported -->
+      <!-- Fallback for browsers that don't support PDFs -->
       Your browser does not support embedded PDFs.
       <a href="LassinePierre_Guindo_Resume_.pdf" download>Download the PDF</a>
     </iframe>
