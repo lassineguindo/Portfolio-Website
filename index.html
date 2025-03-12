@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Important for mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lassine's Portfolio - Home</title>
   <style>
@@ -189,12 +190,29 @@
       overflow: hidden;
       z-index: 1000;
     }
+    /* Collapsed state: hide chat body and input */
+    .chat-container.collapsed .chat-body,
+    .chat-container.collapsed .chat-input {
+      display: none;
+    }
     .chat-header {
       background: #000;
       color: #fff;
       padding: 10px;
       text-align: center;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px; /* spacing for arrow button */
+    }
+    /* Toggle Arrow Button */
+    .toggle-btn {
+      background: transparent;
+      border: none;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
     }
     .chat-body {
       background: #ecf0f1;
@@ -328,19 +346,18 @@
     </div>
   </section>
 
- <!-- Chatbot Container -->
-<div class="chat-container">
-  <div class="chat-header">
-    Lassine’s Chatbot
-    <button id="toggle-chat" class="toggle-btn">▼</button>
+  <!-- Chatbot Container -->
+  <div class="chat-container">
+    <div class="chat-header">
+      Lassine’s Chatbot
+      <button id="toggle-chat" class="toggle-btn">▼</button>
+    </div>
+    <div class="chat-body" id="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="user-input" placeholder="Ask me about my skills, experience, projects...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
   </div>
-  <div class="chat-body" id="chat-box"></div>
-  <div class="chat-input">
-    <input type="text" id="user-input" placeholder="Ask me about my skills, experience, projects...">
-    <button id="send-btn" onclick="sendMessage()">Send</button>
-  </div>
-</div>
-
 
   <footer>
     <p>&copy; 2024 Lassine. All Rights Reserved.</p>
