@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- This meta tag is critical for mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lassine's Portfolio - Home</title>
   <style>
@@ -12,7 +11,6 @@
       margin: 0;
       padding: 0;
     }
-    /* Global Styles */
     html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -21,7 +19,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      overflow-x: hidden; /* Prevent horizontal scroll */
+      overflow-x: hidden;
     }
     /* Header */
     header {
@@ -43,23 +41,33 @@
       display: flex;
       justify-content: center;
       border-bottom: 1px solid #444;
+      flex-wrap: wrap; /* allows nav links to wrap on small screens */
     }
     nav a {
       color: #fff;
       padding: 1rem 1.5rem;
       text-decoration: none;
       transition: color 0.3s ease;
+      font-size: 1rem; /* default nav font size */
     }
     nav a:hover {
       color: #aaa;
     }
+    /* Responsive Nav: smaller font & less padding on narrower screens */
+    @media (max-width: 600px) {
+      nav a {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+
     /* Hero Section */
     .hero-section {
       padding: 2rem;
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;  /* Allow stacking on narrow screens */
+      flex-wrap: wrap;
       align-items: center;
       gap: 2rem;
       text-align: left;
@@ -85,7 +93,7 @@
       line-height: 1.6;
       margin-bottom: 1rem;
     }
-    /* Blog/News Section (Side-by-side) */
+    /* Blog/News Section */
     .blog-section {
       max-width: 900px;
       margin: 2rem auto;
@@ -127,8 +135,7 @@
       position: relative;
       width: 100%;
       max-width: 700px;
-      /* Using aspect-ratio to maintain 7:5 ratio (700x500 on large screens) */
-      aspect-ratio: 7 / 5;
+      aspect-ratio: 7 / 5; /* keep a 700x500 ratio on large screens */
       margin: 0 auto;
       margin-top: 1rem;
       overflow: hidden;
@@ -267,6 +274,7 @@
     <a href="resume.html">Resume</a>
     <a href="contact.html">Contact</a>
   </nav>
+
   <!-- Hero Section -->
   <section class="hero-section">
     <img src="PHoto.jpg" alt="Lassine Pierre Guindo" class="profile-pic">
@@ -283,6 +291,7 @@
       </p>
     </div>
   </section>
+
   <!-- Blog/News Section (Side-by-side) -->
   <section class="blog-section">
     <h2>Latest Cybersecurity News</h2>
@@ -306,6 +315,7 @@
       </div>
     </div>
   </section>
+
   <!-- Travel Slideshow Section -->
   <section class="travel-section">
     <h2>Travel</h2>
@@ -317,6 +327,7 @@
       <span class="arrow right-arrow" onclick="nextImage()">&#10095;</span>
     </div>
   </section>
+
   <!-- Chatbot Container -->
   <div class="chat-container">
     <div class="chat-header">Lassine’s Chatbot</div>
@@ -326,11 +337,14 @@
       <button id="send-btn" onclick="sendMessage()">Send</button>
     </div>
   </div>
+
   <footer>
     <p>&copy; 2024 Lassine. All Rights Reserved.</p>
   </footer>
+
   <!-- Chatbot Script -->
   <script src="chatbot.js"></script>
+
   <!-- Slideshow Script -->
   <script>
     const group1 = [
@@ -351,11 +365,14 @@
       { src: "IMG_2823.jpeg" }
     ];
     const travelImages = group1.concat(group2);
+
     let currentIndex = 0;
     const travelImg = document.getElementById("travel-img");
+
     function showImage(index) {
       travelImg.src = travelImages[index].src;
     }
+
     function prevImage() {
       currentIndex--;
       if (currentIndex < 0) {
@@ -363,6 +380,7 @@
       }
       showImage(currentIndex);
     }
+
     function nextImage() {
       currentIndex++;
       if (currentIndex >= travelImages.length) {
