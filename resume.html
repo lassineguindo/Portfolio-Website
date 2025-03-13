@@ -93,7 +93,7 @@
     .pdf-viewer {
       width: 90vw;    /* 90% of the viewport width */
       height: 90vh;   /* 90% of the viewport height */
-      border: none;   /* no border around iframe */
+      border: none;
       display: block;
       margin: 0 auto;
     }
@@ -124,7 +124,8 @@
     <h2>View or Download Resume</h2>
     <!-- "Download Resume" button in black -->
     <p>
-      <a href="LassinePierre_Guindo_Resume_.pdf" download class="download-button">
+      <!-- Make sure this filename matches exactly in your repo -->
+      <a href="LassinePierre_Guindo_Resume.pdf" download class="download-button">
         View/Download Full Resume
       </a>
     </p>
@@ -132,10 +133,11 @@
     <!-- Large iframe for PDF viewer -->
     <iframe
       class="pdf-viewer"
-      src="LassinePierre_Guindo_Resume_.pdf"
+      src="LassinePierre_Guindo_Resume.pdf"
       title="Lassine Pierre Guindo Resume">
+      <!-- Fallback if PDF is not supported -->
       Your browser does not support embedded PDFs.
-      <a href="LassinePierre_Guindo_Resume_.pdf" download>Download the PDF</a>
+      <a href="LassinePierre_Guindo_Resume.pdf" download>Download the PDF</a>
     </iframe>
   </section>
 
