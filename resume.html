@@ -84,16 +84,17 @@
       border-radius: 5px;
       font-size: 1rem;
       transition: background 0.3s ease;
+      margin-bottom: 1rem;
     }
     .download-button:hover {
       background: #333; /* Darker black on hover */
     }
     /* PDF Viewer */
     .pdf-viewer {
-      width: 90vw;    /* wide: 90% of the viewport width */
-      height: 90vh;   /* tall: 90% of the viewport height */
+      width: 90vw;    /* 90% of the viewport width */
+      height: 90vh;   /* 90% of the viewport height */
       border: none;   /* no border around iframe */
-      display: block; /* center via margin if desired */
+      display: block;
       margin: 0 auto;
     }
     /* Footer */
@@ -128,12 +129,11 @@
       </a>
     </p>
 
-    <!-- Large iframe for PDF viewer, nearly filling the screen -->
+    <!-- Large iframe for PDF viewer -->
     <iframe
       class="pdf-viewer"
       src="LassinePierre_Guindo_Resume_.pdf"
       title="Lassine Pierre Guindo Resume">
-      <!-- Fallback if PDF is not supported -->
       Your browser does not support embedded PDFs.
       <a href="LassinePierre_Guindo_Resume_.pdf" download>Download the PDF</a>
     </iframe>
