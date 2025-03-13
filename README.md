@@ -43,8 +43,9 @@ Welcome to my portfolio website! This site showcases my work, skills, and experi
    The site is designed to be mobile-friendly. On smaller devices, the navigation bar and content will adjust automatically to fit your screen.
 
 3. **Chatbot:**  
-   A chatbot is located in the bottom-right corner on every page. It is interactive and can be minimized by clicking the arrow icon if it gets in the way.
+   A chatbot is located in the bottom-right corner of the Home page. It is interactive and can be minimized by clicking the arrow icon if it gets in the way.
 
 4. **Resume Viewer:**  
-   On the Resume page, you’ll see an embedded PDF viewer that fills most of the screen. You can use the native PDF toolbar (on supported desktop browsers) to zoom in/out and navigate pages. If needed, you can also download the resume using the **Download Resume** button.
+   - On the Resume page, you’ll see an embedded PDF viewer that fills most of the screen. You can use the native PDF toolbar (on supported desktop browsers) to zoom in/out and navigate pages. If needed, you can also download the resume using the **Download Resume** button.
+   - On Mobile, click on view/Download Full Resume to see the whole resume. 
 
