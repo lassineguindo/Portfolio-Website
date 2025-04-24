@@ -42,14 +42,14 @@
       display: flex;
       justify-content: center;
       border-bottom: 1px solid #444;
-      flex-wrap: wrap; /* allows nav links to wrap on small screens */
+      flex-wrap: wrap; /* wrap on small screens */
     }
     nav a {
       color: #fff;
       padding: 1rem 1.5rem;
       text-decoration: none;
       transition: color 0.3s ease;
-      font-size: 1rem; /* default nav font size */
+      font-size: 1rem;
     }
     nav a:hover {
       color: #aaa;
@@ -93,6 +93,85 @@
       line-height: 1.6;
       margin-bottom: 1rem;
     }
+
+    /* Blog/News Section */
+    .blog-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .blog-section h2 {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #444;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+    }
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .news-widget {
+      flex: 1;
+      min-width: 300px;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+    /* Travel Slideshow Section */
+    .travel-section {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .travel-section h2 {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #444;
+      display: block;
+      padding-bottom: 0.5rem;
+    }
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      aspect-ratio: 7 / 5;
+      margin: 0 auto;
+      margin-top: 1rem;
+      overflow: hidden;
+    }
+    .image-container {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      position: relative;
+    }
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+    .arrow {
+      color: #fff;
+      font-weight: bold;
+      font-size: 2rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      padding: 0 1rem;
+      user-select: none;
+      z-index: 2;
+      transition: color 0.2s ease;
+    }
+    .left-arrow { left: 0; }
+    .right-arrow { right: 0; }
+    .arrow:hover { color: #ccc; }
+
     /* Chatbot Container */
     .chat-container {
       width: clamp(280px, 90%, 320px);
@@ -101,13 +180,12 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      box-shadow: 0px 0px 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       z-index: 1000;
     }
-    /* Collapsed state: hide chat body and input */
     .chat-container.collapsed .chat-body,
     .chat-container.collapsed .chat-input {
       display: none;
@@ -116,12 +194,11 @@
       background: #000;
       color: #fff;
       padding: 10px;
-      text-align: center;
       font-weight: bold;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px; /* spacing for arrow button */
+      gap: 8px;
     }
     .toggle-btn {
       background: transparent;
@@ -135,7 +212,6 @@
       height: 250px;
       overflow-y: auto;
       padding: 10px;
-      box-sizing: border-box;
       flex: 1;
     }
     .chat-input {
@@ -143,7 +219,6 @@
       padding: 10px;
       display: flex;
       gap: 6px;
-      align-items: center;
     }
     .chat-input input {
       flex: 1;
@@ -162,11 +237,8 @@
       cursor: pointer;
       font-size: 1rem;
     }
-    .chat-input button:hover {
-      background: #3498db;
-    }
-    .user-message,
-    .bot-message {
+    .chat-input button:hover { background: #3498db; }
+    .user-message, .bot-message {
       margin: 5px 0;
       padding: 6px 8px;
       border-radius: 5px;
@@ -185,6 +257,7 @@
       text-align: left;
       margin-right: auto;
     }
+
     /* Footer */
     footer {
       background: #000;
@@ -196,7 +269,6 @@
   </style>
 </head>
 <body>
-  <!-- Header & Navigation -->
   <header>
     <h1>Welcome to my portfolio</h1>
     <h3>Lassine Pierre Guindo</h3>
@@ -209,27 +281,45 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero Section -->
   <section class="hero-section">
     <img src="PHoto.jpg" alt="Lassine Pierre Guindo" class="profile-pic">
     <div class="intro-text">
       <h1><strong>IT Specialist</strong></h1>
-      <p>
-        Hello, I’m Lassine Pierre Guindo, a dedicated professional with a broad background in tech support, cybersecurity, data visualization, and web development. Over the years, I’ve honed my skills in Python, JavaScript, and advanced security frameworks like NIST, OWASP, MITRE ATT&CK, and the Cyber Kill Chain.
-      </p>
+      <p>Hello, I’m Lassine Pierre Guindo, a dedicated professional with a broad background in tech support, cybersecurity, data visualization, and web development. Over the years, I’ve honed my skills in Python, JavaScript, and advanced security frameworks like NIST, OWASP, MITRE ATT&CK, and the Cyber Kill Chain. I thrive on solving complex problems—whether I’m designing interactive dashboards for call center data, analyzing cybersecurity threats, or helping community members enhance their digital literacy. My experience spans everything from OS recovery and device setup to building creative data-driven solutions that empower users and organizations.</p>
+      <p>Beyond my technical work, I’m deeply passionate about bridging the digital divide. I’ve supported community-focused initiatives by offering affordable broadband guidance and delivering hands-on training to help people navigate technology confidently. I believe that technology should be accessible and inclusive, and I’m always eager to collaborate on projects that expand digital access and foster innovation.</p>
+      <p>Outside of work, I love traveling, exploring new cultures, gaming, and playing basketball. These interests fuel my curiosity and inspire fresh ideas. I’m all about creating solutions that put people first, crafting projects that genuinely make a difference in everyday life.</p>
     </div>
   </section>
 
-  <!-- Chatbot Container -->
-  <div class="chat-container" id="chat">
+  <section class="blog-section">
+    <h2>Latest Cybersecurity News</h2>
+    <p>Check out the latest articles from Dark Reading and Hacker News:</p>
+    <div class="news-container">
+      <div class="news-widget">
+        <script src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Loading" data-fw-param="171675/"></script>
+      </div>
+    </div>
+  </section>
+
+  <section class="travel-section">
+    <h2>Travel</h2>
+    <div class="slideshow-container">
+      <span class="arrow left-arrow" onclick="prevImage()">&#10094;</span>
+      <div class="image-container">
+        <img id="travel-img" src="IMG_8947.jpeg" alt="Travel Photo">
+      </div>
+      <span class="arrow right-arrow" onclick="nextImage()">&#10095;</span>
+    </div>
+  </section>
+
+  <div class="chat-container">
     <div class="chat-header">
-      Lassine’s Chatbot
-      <button id="toggle-chat" class="toggle-btn">▼</button>
+      Lassine’s Chatbot<button id="toggle-chat" class="toggle-btn">▼</button>
     </div>
     <div class="chat-body" id="chat-box"></div>
     <div class="chat-input">
-      <input type="text" id="user-input" placeholder="Ask me about my skills...">
-      <button id="send-btn">Send</button>
+      <input type="text" id="user-input" placeholder="Ask me about my skills, experience, projects...">
+      <button id="send-btn" onclick="sendMessage()">Send</button>
     </div>
   </div>
 
@@ -240,12 +330,22 @@
   <script src="chatbot.js"></script>
   <script>
     // toggle collapse
-    document.getElementById('toggle-chat').addEventListener('click', ()=>{
-      document.getElementById('chat').classList.toggle('collapsed');
-      // flip arrow
-      const btn = event.currentTarget;
-      btn.textContent = btn.textContent == '▼' ? '▲' : '▼';
+    document.getElementById('toggle-chat').addEventListener('click', () => {
+      const container = document.querySelector('.chat-container');
+      container.classList.toggle('collapsed');
+      document.getElementById('toggle-chat').textContent =
+        container.classList.contains('collapsed') ? '▲' : '▼';
     });
+
+    // slideshow logic
+    const group1 = [{src:'IMG_8947.jpeg'},{src:'IMG_8949.jpeg'},{src:'IMG_8961.jpeg'},{src:'IMG_8963.jpeg'},{src:'IMG_8992.jpg'},{src:'IMG_8965.jpeg'},{src:'IMG_8975.jpeg'}];
+    const group2 = [{src:'IMG_9125.jpeg'},{src:'IMG_9115.jpeg'},{src:'IMG_9127.jpeg'},{src:'IMG_2827.jpg'},{src:'building.jpg'},{src:'IMG_2823.jpeg'}];
+    const travelImages = group1.concat(group2);
+    let currentIndex = 0;
+    const travelImg = document.getElementById('travel-img');
+    function showImage(i) { travelImg.src = travelImages[i].src; }
+    function prevImage(){ currentIndex = (currentIndex-1+travelImages.length)%travelImages.length; showImage(currentIndex);}    
+    function nextImage(){ currentIndex = (currentIndex+1)%travelImages.length; showImage(currentIndex);}  
   </script>
 </body>
 </html>
