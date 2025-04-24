@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lassine's Portfolio - Resume</title>
+  <title>Lassine's Portfolio — Resume</title>
   <style>
     /* Basic Reset */
     * {
@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
     }
-    /* Global Styles */
+    /* Global */
     html, body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -74,11 +74,11 @@
       color: #000;
       margin-bottom: 1rem;
     }
-    /* Custom download button styling (black) */
+    /* Download button */
     .download-button {
       display: inline-block;
-      background: #000;  /* Black background */
-      color: #fff;       /* White text */
+      background: #000;
+      color: #fff;
       padding: 0.75rem 1.5rem;
       text-decoration: none;
       border-radius: 5px;
@@ -87,15 +87,15 @@
       margin-bottom: 1rem;
     }
     .download-button:hover {
-      background: #333; /* Darker black on hover */
+      background: #333;
     }
-    /* PDF Viewer */
+    /* PDF embed */
     .pdf-viewer {
-      width: 90vw;    /* 90% of the viewport width */
-      height: 90vh;   /* 90% of the viewport height */
+      width: 90vw;   /* fill 90% of viewport width */
+      height: 90vh;  /* fill 90% of viewport height */
       border: none;
-      display: block;
       margin: 0 auto;
+      display: block;
     }
     /* Footer */
     footer {
@@ -112,6 +112,7 @@
     <h1>My Resume</h1>
     <h3>Welcome to my portfolio</h3>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About me</a>
@@ -122,21 +123,17 @@
 
   <section>
     <h2>View or Download Resume</h2>
-    <!-- "Download Resume" button in black -->
     <p>
-      <!-- Make sure this filename matches exactly in your repo -->
-      <a href="LassinePierre_Guindo_Resume1.pdf" download class="download-button">
+      <a href="LassinePierre_Guindo_Resume.pdf" download class="download-button">
         View/Download Full Resume
       </a>
     </p>
-
-    <!-- Large iframe for PDF viewer -->
     <iframe
       class="pdf-viewer"
       src="LassinePierre_Guindo_Resume.pdf"
       title="Lassine Pierre Guindo Resume">
-      <!-- Fallback if PDF is not supported -->
       Your browser does not support embedded PDFs.
+      <br>
       <a href="LassinePierre_Guindo_Resume.pdf" download>Download the PDF</a>
     </iframe>
   </section>
